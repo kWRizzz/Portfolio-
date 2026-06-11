@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Globe, Code, Server, Smartphone, CheckCircle, Award, Briefcase } from "lucide-react";
 
-// Counter Component for Stats
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -15,7 +14,7 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
       let start = 0;
       const end = value;
       const duration = 1.5; // seconds
-      const incrementTime = 16; // ms (~60fps)
+      const incrementTime = 16; 
       const totalSteps = Math.ceil((duration * 1000) / incrementTime);
       const stepSize = end / totalSteps;
       let step = 0;
@@ -68,19 +67,16 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 bg-[#0a0f1d] relative overflow-hidden">
-      {/* Background shapes */}
       <div className="absolute right-0 top-1/3 w-72 h-72 rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20 items-start">
           
-          {/* Left Column: Vertical Timeline Services */}
           <div className="md:col-span-6 order-2 md:order-1 relative">
             <h3 className="text-zinc-500 font-semibold tracking-wider text-xs uppercase mb-8 md:hidden">
               My Services
             </h3>
 
-            {/* Vertical Connector Line */}
             <div className="absolute left-[26px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-primary via-primary/30 to-zinc-800" />
 
             <div className="flex flex-col gap-8">
@@ -98,20 +94,16 @@ export default function About() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                   >
-                    {/* Circle Dot with Icon */}
                     <div className="relative z-10 flex items-center justify-center w-[54px] h-[54px] rounded-full bg-[#080c14] border-2 border-primary transition-all duration-300 hover:scale-115 hover:orange-glow-sm">
                       <IconComponent className="w-5 h-5 text-primary" />
-                      {/* Pulsing indicator */}
                       <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-primary animate-pulse" />
                     </div>
 
-                    {/* Service Info Content */}
                     <div className="flex-1 pt-3">
                       <h4 className="text-lg font-semibold text-white hover:text-primary transition-colors duration-200">
                         {service.title}
                       </h4>
                       
-                      {/* Expandable description using Framer Motion */}
                       <motion.p 
                         className="text-zinc-400 text-sm mt-2 leading-relaxed"
                         initial={{ height: "auto", opacity: 0.8 }}
@@ -139,7 +131,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Column: About Narrative & Stats */}
           <div className="md:col-span-6 order-1 md:order-2">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -155,10 +146,8 @@ export default function About() {
                 I started my software journey from photography. Through that, I learned to love the process of creating from scratch. Since then, this has led me to love software development as it fulfills my love for learning and building things. I specialize in building fully responsive web apps with beautiful micro-interactions, clean architectures, and modern styling.
               </p>
 
-              {/* Stats Grid matching the screenshot */}
               <div className="grid grid-cols-3 gap-6 border-t border-border/40 pt-8">
                 
-                {/* Stat 1 */}
                 <div className="flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
                     <Counter value={120} suffix=" +" />
@@ -168,7 +157,6 @@ export default function About() {
                   </span>
                 </div>
 
-                {/* Stat 2 */}
                 <div className="flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
                     <Counter value={95} suffix=" %" />
@@ -178,7 +166,6 @@ export default function About() {
                   </span>
                 </div>
 
-                {/* Stat 3 */}
                 <div className="flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
                     <Counter value={10} suffix=" +" />

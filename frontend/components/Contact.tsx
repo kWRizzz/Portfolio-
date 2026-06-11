@@ -13,7 +13,6 @@ export default function Contact() {
     e.preventDefault();
     setStatus("loading");
 
-    // Simulate contact form submission
     setTimeout(() => {
       setStatus("success");
       setFormState({ name: "", email: "", subject: "", message: "" });
@@ -22,7 +21,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-[#0a0f1d] relative z-20 overflow-hidden">
-      {/* Background radial glow */}
       <div className="absolute right-1/4 bottom-0 w-80 h-80 rounded-full bg-primary/5 blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">
@@ -36,7 +34,6 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-          {/* Left Column: Contact Details */}
           <div className="lg:col-span-5 flex flex-col gap-8">
             <h3 className="text-2xl font-bold text-white mb-2">
               Let's build something cool.
@@ -47,7 +44,6 @@ export default function Contact() {
             </p>
 
             <div className="flex flex-col gap-6">
-              {/* Phone item */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-[#161f30] border border-border/60 flex items-center justify-center text-primary">
                   <Phone className="w-5 h-5" />
@@ -60,7 +56,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Email item */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-[#161f30] border border-border/60 flex items-center justify-center text-primary">
                   <Mail className="w-5 h-5" />
@@ -73,7 +68,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Location item */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-[#161f30] border border-border/60 flex items-center justify-center text-primary">
                   <MapPin className="w-5 h-5" />
@@ -87,7 +81,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social Connect links */}
             <div className="border-t border-border/40 pt-8 mt-4">
               <span className="text-xs text-zinc-500 uppercase tracking-wider block mb-4">
                 Connect with me
@@ -113,7 +106,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Column: Contact Form */}
           <div className="lg:col-span-7 bg-card border border-border/40 p-8 rounded-2xl relative">
             <AnimatePresence mode="wait">
               {status === "success" ? (
@@ -149,7 +141,6 @@ export default function Contact() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  {/* Name field */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="name" className="text-xs font-medium text-zinc-400 uppercase tracking-wider">
                       Your Name
@@ -165,7 +156,6 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Email field */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="email" className="text-xs font-medium text-zinc-400 uppercase tracking-wider">
                       Email Address
@@ -181,7 +171,6 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Subject field */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="subject" className="text-xs font-medium text-zinc-400 uppercase tracking-wider">
                       Subject
@@ -197,7 +186,6 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Message field */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="message" className="text-xs font-medium text-zinc-400 uppercase tracking-wider">
                       Your Message
@@ -213,7 +201,6 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Submit Button */}
                   <motion.button
                     type="submit"
                     disabled={status === "loading"}

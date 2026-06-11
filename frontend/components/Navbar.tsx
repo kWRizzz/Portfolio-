@@ -21,7 +21,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      // Simple active link detection based on scroll position
       const sections = ["home", "about", "projects", "contact"];
       const scrollPosition = window.scrollY + 200;
 
@@ -59,7 +58,6 @@ export default function Navbar() {
           Krishna <span className="text-primary">Bhargava</span>
         </a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const isLinkActive = activeSection === link.href.substring(1);
@@ -84,7 +82,6 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Social Icons & Contact Link */}
         <div className="hidden md:flex items-center gap-4">
           <a
             href="https://github.com/kWRizzz"
@@ -110,7 +107,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile menu button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none"
@@ -119,7 +115,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

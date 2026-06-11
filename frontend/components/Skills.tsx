@@ -38,7 +38,6 @@ export default function Skills() {
   return (
     <div className="w-full bg-card/20 border-y border-border/40 py-6 md:py-8 backdrop-blur-sm relative z-20">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Desktop Layout (Standard flex row) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -58,7 +57,6 @@ export default function Skills() {
           ))}
         </motion.div>
 
-        {/* Mobile Layout (Exactly matching the screenshot: 2 rows layout) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -66,7 +64,6 @@ export default function Skills() {
           viewport={{ once: true }}
           className="flex flex-col gap-4 md:hidden text-center"
         >
-          {/* Row 1 */}
           <div className="flex justify-around items-center">
             {skills
               .filter((_, idx) => [0, 1, 5, 6].includes(idx)) // HTML5, CSS, Git, Github
@@ -82,7 +79,6 @@ export default function Skills() {
               ))}
           </div>
 
-          {/* Row 2 */}
           <div className="flex justify-around items-center">
             {skills
               .filter((_, idx) => [3, 4, 2].includes(idx)) // Node.js, React, Javascript

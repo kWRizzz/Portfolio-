@@ -12,14 +12,12 @@ export default function Hero() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // Typewriter effect logic
   useEffect(() => {
     let timer: NodeJS.Timeout;
     const currentRole = roles[roleIndex];
     const typingSpeed = isDeleting ? 40 : 80;
 
     if (!isDeleting && displayText === currentRole) {
-      // Hold before starting deletion
       timer = setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && displayText === "") {
       setIsDeleting(false);
@@ -37,11 +35,9 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [displayText, isDeleting, roleIndex]);
 
-  // 3D Parallax Tilt Effect for the avatar card
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  // Map mouse position to rotation degrees (-15 to 15 degrees)
   const rotateX = useTransform(y, [-300, 300], [15, -15]);
   const rotateY = useTransform(x, [-300, 300], [-15, 15]);
 
@@ -65,12 +61,10 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden grid-pattern"
     >
-      {/* Dynamic Background Glows */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
-        {/* Left Content Column */}
         <motion.div
           className="md:col-span-7 flex flex-col justify-center text-center md:text-left order-2 md:order-1"
           initial={{ opacity: 0, x: -50 }}
@@ -84,7 +78,6 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center justify-center md:justify-start gap-4 mb-4 relative">
-            {/* Screenshot line on the left of name */}
             <div className="hidden md:block w-16 h-[2px] bg-primary/60 -ml-20 absolute left-0" />
             <h1 className="text-3xl md:text-5xl font-light text-zinc-300">
               I'm <span className="font-bold text-white tracking-tight">Krishna Bhargava</span>
@@ -98,7 +91,6 @@ export default function Hero() {
             </h2>
           </div>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <motion.a
               href="#contact"
@@ -122,7 +114,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right Avatar Column */}
         <motion.div
           className="md:col-span-5 flex justify-center items-center order-1 md:order-2"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -135,7 +126,6 @@ export default function Hero() {
             onMouseLeave={handleMouseLeave}
             style={{ perspective: 1000 }}
           >
-            {/* Decorative Floating Bracket: < */}
             <motion.div
               className="absolute left-0 text-primary/30 font-mono text-5xl md:text-7xl pointer-events-none select-none"
               animate={{
@@ -151,7 +141,6 @@ export default function Hero() {
               &lt;
             </motion.div>
 
-            {/* Decorative Floating Bracket: > */}
             <motion.div
               className="absolute right-0 text-primary/30 font-mono text-5xl md:text-7xl pointer-events-none select-none"
               animate={{
@@ -167,7 +156,6 @@ export default function Hero() {
               &gt;
             </motion.div>
 
-            {/* Interactive 3D Avatar Card */}
             <motion.div
               style={{
                 rotateX,
@@ -176,13 +164,10 @@ export default function Hero() {
               }}
               className="w-60 h-60 md:w-80 md:h-80 rounded-full relative p-[6px] transition-all duration-200 ease-out"
             >
-              {/* Outer Glowing Ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-primary/50 to-transparent opacity-80 blur-[8px] animate-spin-slow pointer-events-none" />
               
-              {/* Inner Solid Border Ring */}
               <div className="absolute inset-[3px] rounded-full bg-gradient-to-tr from-primary via-primary/20 to-[#080c14] z-0" />
 
-              {/* Image Container */}
               <div className="w-full h-full rounded-full overflow-hidden bg-[#0c1220] relative z-10 border-4 border-[#080c14]">
                 <Image
                   src="/developer_avatar.png"

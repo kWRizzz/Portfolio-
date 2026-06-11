@@ -81,7 +81,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 bg-[#080c14] relative z-20">
-      {/* Decorative background circle */}
+
       <div className="absolute left-1/3 bottom-10 w-96 h-96 rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">
@@ -94,7 +94,7 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Projects Grid */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <motion.div
@@ -107,20 +107,19 @@ export default function Projects() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
             >
-              {/* Card visual banner */}
+         
               <div className={`h-48 w-full bg-gradient-to-tr ${project.gradient} flex items-center justify-center p-6 relative overflow-hidden`}>
-                {/* Background graphic */}
+         
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <Code2 className="w-16 h-16 text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500" />
                 
-                {/* Visual Accent */}
+     
                 <div className="absolute top-4 right-4 bg-[#080c14]/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[10px] font-bold tracking-wider text-white uppercase flex items-center gap-1">
                   <Sparkles className="w-3 h-3 text-primary animate-pulse" />
                   {project.category}
                 </div>
               </div>
 
-              {/* Card Details */}
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
                   {project.title}
@@ -129,7 +128,7 @@ export default function Projects() {
                   {project.shortDescription}
                 </p>
 
-                {/* Tech tags */}
+            
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.slice(0, 3).map((tag) => (
                     <span
@@ -155,7 +154,6 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Details Modal */}
       <AnimatePresence>
         {activeProject && (
           <motion.div
@@ -172,7 +170,6 @@ export default function Projects() {
               className="bg-card border border-border max-w-2xl w-full rounded-2xl overflow-hidden shadow-2xl relative z-10"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
               <button
                 onClick={() => setActiveProject(null)}
                 className="absolute top-4 right-4 z-20 p-2 rounded-full bg-background/60 hover:bg-background border border-border/40 text-zinc-400 hover:text-white transition-colors"
@@ -180,7 +177,7 @@ export default function Projects() {
                 <X className="w-5 h-5" />
               </button>
 
-              {/* Modal Banner */}
+          
               <div className={`h-40 bg-gradient-to-r ${activeProject.gradient} p-8 flex items-end relative`}>
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="relative z-10">
@@ -193,7 +190,6 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Modal Body */}
               <div className="p-6 md:p-8 max-h-[60vh] overflow-y-auto">
                 <h4 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-2">
                   Project Overview
@@ -228,7 +224,6 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Footer Links */}
                 <div className="flex flex-col sm:flex-row gap-4 border-t border-border/40 pt-6">
                   <a
                     href={activeProject.liveLink}
