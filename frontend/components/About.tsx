@@ -142,36 +142,36 @@ export default function About() {
                 About me
               </h2>
               
-              <p className="text-zinc-300 text-base md:text-lg leading-relaxed mb-10">
-                I started my software journey from photography. Through that, I learned to love the process of creating from scratch. Since then, this has led me to love software development as it fulfills my love for learning and building things. I specialize in building fully responsive web apps with beautiful micro-interactions, clean architectures, and modern styling.
+              <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-10">
+                I am a Computer Science (AI/ML) student and Full-Stack Developer passionate about building scalable web applications and AI-powered solutions. My primary expertise lies in the MERN stack, backend development, and system design. I enjoy transforming ideas into real-world products, whether it's developing real-time collaborative platforms, microservices-based applications, or AI-powered learning tools. Currently, I am focused on strengthening my backend engineering skills, exploring Generative AI, and building impactful software that solves real problems.
               </p>
 
               <div className="grid grid-cols-3 gap-6 border-t border-border/40 pt-8">
                 
                 <div className="flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
-                    <Counter value={120} suffix=" +" />
+                    <Counter value={15} suffix="+" />
                   </div>
                   <span className="text-zinc-400 text-xs md:text-sm font-medium mt-1">
-                    Completed Projects
+                    Projects Built
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
-                    <Counter value={95} suffix=" %" />
+                    <Counter value={500} suffix="+" />
                   </div>
                   <span className="text-zinc-400 text-xs md:text-sm font-medium mt-1">
-                    Client satisfaction
+                    DSA Problems Solved
                   </span>
                 </div>
 
                 <div className="flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
-                    <Counter value={10} suffix=" +" />
+                    <Counter value={3} suffix="+" />
                   </div>
                   <span className="text-zinc-400 text-xs md:text-sm font-medium mt-1">
-                    Years of experience
+                    Major Full-Stack Applications
                   </span>
                 </div>
 

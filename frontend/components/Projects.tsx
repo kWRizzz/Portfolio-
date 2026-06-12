@@ -22,56 +22,52 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "RizzChat - Real-time Chat App",
-    category: "Full Stack (MERN)",
-    shortDescription: "A feature-rich real-time messaging application with active indicators, group chats, and message history.",
-    longDescription: "RizzChat is a fully secure real-time messaging application. Built on the MERN stack, it leverages Socket.io for bi-directional event-based communication. The application features user authentication via JWT, group chat creation, profile management, active status indicators, and searchable message history.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Tailwind CSS"],
-    githubLink: "https://github.com/kWRizzz",
-    liveLink: "https://github.com/kWRizzz",
+    title: "Talent-Rush-Pro",
+    category: "Real-time Platform",
+    shortDescription: "A scalable real-time coding interview platform supporting 50+ programming languages with auto-evaluation and collaboration.",
+    longDescription: "Talent-Rush-Pro is a scalable real-time coding interview platform built for technical recruitment. It supports auto-evaluation for 50+ programming languages and features low-latency multi-user collaboration tools, including real-time coding editors, interactive whiteboards, instant feedback, and chat functions.",
+    tags: ["React", "Node.js", "Socket.IO", "WebSockets", "Compiler API", "Tailwind CSS"],
+    githubLink: "https://github.com/kWRizzz/Talent-Rush",
+    liveLink: "https://github.com/kWRizzz/Talent-Rush",
     gradient: "from-orange-500 to-red-600",
     features: [
-      "Real-time instant messaging using WebSockets",
-      "Secure user authentication and route protection",
-      "Group chat management and custom profile avatars",
-      "Offline/Online status tracking and indicators",
-      "Responsive UI built with Tailwind CSS"
+      "Developed a scalable real-time coding interview platform supporting 50+ programming languages with auto-evaluation",
+      "Implemented real-time collaboration using WebSockets and Socket.IO enabling multi-user sessions, live coding, chat, and screen sharing",
+      "Engineered the system to handle concurrent coding sessions with low latency ensuring smooth real-time performance",
+      "Designed a secure and scalable system architecture with features like interactive whiteboard, instant feedback, and role-based sessions"
     ]
   },
   {
     id: 2,
-    title: "MERN Cart - E-Commerce Platform",
-    category: "Full Stack",
-    shortDescription: "A comprehensive SaaS e-commerce solution featuring secure Stripe payment gateways, cart flows, and order tracking.",
-    longDescription: "MERN Cart is a production-ready e-commerce platform offering an intuitive customer shopping journey and a powerful admin management dashboard. It includes complete shopping cart functionality, secure checkout integration via Stripe, automated transaction emails, and real-time inventory adjustments.",
-    tags: ["Next.js", "Redux Toolkit", "Node.js", "MongoDB", "Stripe API", "CSS Modules"],
-    githubLink: "https://github.com/kWRizzz",
-    liveLink: "https://github.com/kWRizzz",
+    title: "Microservices Cab Service",
+    category: "Microservices & Cloud",
+    shortDescription: "A scalable cab booking platform built using microservices architecture, Stripe payments, and container orchestration.",
+    longDescription: "A scalable cab booking system built using a MERN-based microservices architecture. It includes dedicated services for users, booking tracking, and payment processing, fully orchestrated using Docker and Kubernetes with API Gateway routing.",
+    tags: ["Docker", "Kubernetes", "MERN Stack", "Maps API", "Socket.IO", "Stripe API"],
+    githubLink: "https://github.com/kWRizzz/MicroServices-Project",
+    liveLink: "https://github.com/kWRizzz/MicroServices-Project",
     gradient: "from-red-500 to-pink-600",
     features: [
-      "Intuitive product filtering, sorting, and search capabilities",
-      "Complete global state management via Redux Toolkit",
-      "Secure Stripe payments with webhook support",
-      "Admin dashboard for product creation and order status updates",
-      "Responsive design optimal for mobile checkout"
+      "Built a scalable cab booking platform using microservices architecture with MERN stack",
+      "Implemented core services including User Service (JWT + MongoDB), Ride Service (Maps API + Socket.IO) for real-time tracking, and Payment Service (Stripe)",
+      "Deployed using Docker and Kubernetes with API Gateway routing, and integrated Firebase notifications for a reliable and scalable distributed system"
     ]
   },
   {
     id: 3,
-    title: "DevBuilder - Portfolio Creator",
-    category: "Web Application",
-    shortDescription: "A builder allowing developers to compile portfolios, manage projects, and export clean customized static websites.",
-    longDescription: "DevBuilder is an interactive web tool helping engineers showcase their work effortlessly. It provides customizable layouts, markdown-driven project writing, API integrations to sync GitHub repositories, and dynamic styling themes powered by Framer Motion. Users can compile their data and host it instantly.",
-    tags: ["React", "Next.js", "Framer Motion", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    githubLink: "https://github.com/kWRizzz",
-    liveLink: "https://github.com/kWRizzz",
+    title: "Recurly",
+    category: "AI Web App",
+    shortDescription: "An AI-powered study assistance platform utilizing note management and automated doubt-solving tools.",
+    longDescription: "Recurly is an AI-driven study assistance application developed to help students manage learning resources efficiently. The platform integrates AI-generated explanations, doubt solving, and secure user notes management in a fully responsive UI.",
+    tags: ["React.js", "Node.js", "Express", "MongoDB", "AI Integrations", "Tailwind CSS"],
+    githubLink: "https://github.com/kWRizzz/Recurly",
+    liveLink: "https://github.com/kWRizzz/Recurly",
     gradient: "from-pink-500 to-rose-600",
     features: [
-      "Drag-and-drop section organization and layout pickers",
-      "GitHub API integration to fetch repository details directly",
-      "Responsive, fluid animations using Framer Motion",
-      "Database persistence using Prisma ORM with PostgreSQL",
-      "One-click compilation and static site generation"
+      "Developed an AI-powered study assistance platform using React.js, Node.js (Express), and MongoDB to help students manage learning resources efficiently",
+      "Implemented secure user authentication and note management features, allowing users to create, organize, update, and access study notes seamlessly",
+      "Integrated AI-generated explanations and intelligent doubt-solving capabilities to provide instant academic assistance and improve learning outcomes",
+      "Designed a responsive and user-friendly interface with optimized backend APIs, ensuring fast performance, scalability, and a smooth user experience"
     ]
   }
 ];
