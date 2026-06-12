@@ -6,6 +6,17 @@ import { ExternalLink, X, Code2, Sparkles, Layers } from "lucide-react";
 import Image from "next/image";
 import { GithubIcon } from "./SocialIcons";
 
+const AndroidIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    {...props}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-5.7-4.32l1.1-1.1c.2-.2.2-.5 0-.7a.48.48 0 00-.7 0l-1.2 1.2c-.79-.34-1.68-.54-2.6-.54s-1.81.2-2.6.54L6.6 2.38c-.2-.2-.5-.2-.7 0a.48.48 0 000 .7l1.1 1.1C5.3 5.38 4.19 7.02 4 9h16c-.19-1.98-1.3-3.62-3-4.32zM9.5 7c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+  </svg>
+);
+
 interface Project {
   id: number;
   title: string;
@@ -56,18 +67,18 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Recurly",
-    category: "AI Web App",
-    shortDescription: "An AI-powered study assistance platform utilizing note management and automated doubt-solving tools.",
-    longDescription: "Recurly is an AI-driven study assistance application developed to help students manage learning resources efficiently. The platform integrates AI-generated explanations, doubt solving, and secure user notes management in a fully responsive UI.",
-    tags: ["React.js", "Node.js", "Express", "MongoDB", "AI Integrations", "Tailwind CSS"],
+    category: "AI Mobile App",
+    shortDescription: "An AI-powered mobile study assistance platform utilizing note management and automated doubt-solving tools.",
+    longDescription: "Recurly is an AI-driven mobile study assistance application developed to help students manage learning resources efficiently. The platform integrates AI-generated explanations, doubt solving, and secure user notes management in a fully responsive mobile interface.",
+    tags: ["React Native", "Node.js", "Express", "MongoDB", "AI Integrations", "Tailwind CSS"],
     githubLink: "https://github.com/kWRizzz/Recurly",
     liveLink: "https://github.com/kWRizzz/Recurly",
     gradient: "from-pink-500 to-rose-600",
     features: [
-      "Developed an AI-powered study assistance platform using React.js, Node.js (Express), and MongoDB to help students manage learning resources efficiently",
+      "Developed an AI-powered mobile study assistance platform using React Native, Node.js (Express), and MongoDB to help students manage learning resources efficiently",
       "Implemented secure user authentication and note management features, allowing users to create, organize, update, and access study notes seamlessly",
       "Integrated AI-generated explanations and intelligent doubt-solving capabilities to provide instant academic assistance and improve learning outcomes",
-      "Designed a responsive and user-friendly interface with optimized backend APIs, ensuring fast performance, scalability, and a smooth user experience"
+      "Designed a responsive and user-friendly mobile interface with optimized backend APIs, ensuring fast performance, scalability, and a smooth user experience"
     ]
   }
 ];
@@ -107,7 +118,9 @@ export default function Projects() {
               <div className={`h-48 w-full bg-gradient-to-tr ${project.gradient} flex items-center justify-center p-6 relative overflow-hidden`}>
          
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Code2 className="w-16 h-16 text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500" />
+                {project.id === 1 && <Code2 className="w-16 h-16 text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500" />}
+                {project.id === 2 && <Layers className="w-16 h-16 text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500" />}
+                {project.id === 3 && <AndroidIcon className="w-16 h-16 text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500" />}
                 
      
                 <div className="absolute top-4 right-4 bg-[#080c14]/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[10px] font-bold tracking-wider text-white uppercase flex items-center gap-1">

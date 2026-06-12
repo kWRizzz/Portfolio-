@@ -103,7 +103,8 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href="#contact" // Let's scroll to contact or allow resume view
+              href="/krishna_resume (1).pdf"
+              download="Krishna_Bhargava_Resume.pdf"
               className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white font-medium border border-primary/40 hover:border-primary px-8 py-4 rounded-xl transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
