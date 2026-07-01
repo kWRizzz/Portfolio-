@@ -13,10 +13,18 @@ export default function Contact() {
     e.preventDefault();
     setStatus("loading");
 
+    // Construct mailto URL to directly send email to kbhargava120@gmail.com
+    const { name, email, subject, message } = formState;
+    const bodyText = `Hi Krishna,\n\nYou have received a new message from your portfolio contact form:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nRegards,\n${name}`;
+    
+    const mailtoUrl = `mailto:kbhargava120@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+
+    // Open email client
     setTimeout(() => {
+      window.location.href = mailtoUrl;
       setStatus("success");
       setFormState({ name: "", email: "", subject: "", message: "" });
-    }, 1500);
+    }, 800);
   };
 
   return (
